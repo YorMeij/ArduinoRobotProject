@@ -1,7 +1,11 @@
 char oldInput
 char newInput
+
+int disp =0;
+
 setup(){
 	 Serial.begin(9600);
+	 pinMode(13,OUTPUT);
 }
 
 loop(){
@@ -14,12 +18,17 @@ loop(){
 		// do the thing
 		proccesInput(newInput);
 	}	
+	output();
 }
 
 int proccesInput(char input){
 	switch(input){
-		case 'w':
-			// do action associated with key w 
+		case 'a':
+			// do action associated with key a
+			disp = 1;
+		break;
+		case 'b':
+			disp = 0;
 		break;
 		case default:
 			//set all pins to zero
@@ -29,4 +38,12 @@ int proccesInput(char input){
 
 char getInput(){
 	return Serial.read();
+}
+
+int output(){
+	if(disp > 1) {
+		digitalWrite(13,HIGH)
+	} else {
+		digitalWrite(13,LOW);
+	}
 }
