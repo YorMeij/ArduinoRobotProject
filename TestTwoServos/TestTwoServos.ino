@@ -1,12 +1,14 @@
-Servo servo1; // create servo object to control a servo
-Servo servo2; // create servo object to control a servo
-int pos = 0; // variable to store the servo position
+#include <Servo.h>;     // include nessesary libs
 
-int X = 9; // pinnumbers servos, currently not in machinedesign
+Servo servo1;           // create servo object to control a servo
+Servo servo2;           // create servo object to control a servo
+int pos = 0;            // variable to store the servo position
+
+int X = 9;              // pinnumbers servos, currently not in machinedesign
 int Y = 3;
 
 void setup() {
-	servo1.attach(X); // attaches the servo on pin X to the servo object
+	servo1.attach(X);     // attaches the servo on pin X to the servo object
 	servo2.attach(Y);
 }
 void loop() {

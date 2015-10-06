@@ -13,6 +13,6 @@ void loop() {
 	delay(1000); 
 	
 	digitalWrite(IN1, LOW); // turn backwards for a second
-	digitalWrite(IN2, High)
+	digitalWrite(IN2, HIGH);
 	delay(1000); // wait for a second
 }
