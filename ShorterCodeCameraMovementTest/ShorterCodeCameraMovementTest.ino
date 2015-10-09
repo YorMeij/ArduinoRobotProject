@@ -17,7 +17,6 @@ void loop() {
 	turnServoTo(s2, 0);
 	turnServoTo(s1, 90);
 	turnServoTo(s2, 90);
-	
 }
 
 //TODO: initilise function
